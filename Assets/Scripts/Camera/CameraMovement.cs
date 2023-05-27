@@ -22,6 +22,7 @@ public class CameraMovement : MonoBehaviour
             // Assume the player is initially in the upper right square
             GameObject targetSquare = upperRightSquare;
 
+<<<<<<< Updated upstream
 
             // Compare the player's position with each square
             if (playerPosition.x < 0 && playerPosition.y > 0)
@@ -52,6 +53,10 @@ public class CameraMovement : MonoBehaviour
             Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, 0, -1f);
         }
         
+=======
+        // Set the camera's position to the center of the target square
+        Camera.main.transform.position = new Vector3(targetPosition.x, targetPosition.y, Camera.main.transform.position.z);
+>>>>>>> Stashed changes
     }
 
     
