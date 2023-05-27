@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 target;
 
     private bool isMoving;
-
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,18 +20,28 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (Input.GetMouseButtonDown(0))
         {
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z;
-            Debug.Log("Quem é o target do botao" + target);
+            
         }
 
         Move();
-        Debug.Log("Quem é o target" + target);
+        
         HasMoved();
-
-        Debug.Log(isMoving);
+        //Animacao
+        if (isMoving)
+        {
+            animator.SetBool("Running", true);
+        }
+        else
+        {
+            animator.SetBool("Running", false);
+        }
+        
     }
 
     private void Move()
