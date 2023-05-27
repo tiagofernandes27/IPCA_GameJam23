@@ -12,11 +12,16 @@ public class ItemManager : MonoBehaviour
    
     public TextMeshProUGUI textUI;
 
+    public Slots slot;
+    
+
+
     private void Start()
     {
         inventory = new List<Item>();
 
         levelItems = FindObjectsOfType<Item>();
+        slot = GetComponent<Slots>();
 
         
     }
@@ -28,6 +33,7 @@ public class ItemManager : MonoBehaviour
             if (item.hasBeenCollected && item.added == false)
             {
                 inventory.Add(item);
+                slot.AddtoSlot(item);
                 Debug.Log("Item Added to inventory");
                 item.added = true;
                 textUI.text = (item.itemName);
@@ -41,5 +47,8 @@ public class ItemManager : MonoBehaviour
                 textUI.text = (item.itemName);
             }
         }
+
+        
+
     }
 }
