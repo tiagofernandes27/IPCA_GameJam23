@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelectSlot : MonoBehaviour
+public class SelecionarSlot : MonoBehaviour
 {
     public GameObject[] slots;
    
