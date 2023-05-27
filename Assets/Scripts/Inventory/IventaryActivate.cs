@@ -26,9 +26,11 @@ public class IventaryActivate : MonoBehaviour
             Debug.Log("Inventario");
             foreach (Transform child in transform)
             {
+                
                 child.gameObject.SetActive(true);
                 isActive= true;
-              
+                Time.timeScale = 0f;
+
 
 
 
@@ -41,8 +43,9 @@ public class IventaryActivate : MonoBehaviour
             {
                 child.gameObject.SetActive(false );
                 isActive = false;
+                Time.timeScale = 1.0f;
                 //gameObject.GetComponent<PlayerMovement>().enabled = true;
-                
+
             }
 
         }
