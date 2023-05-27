@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     private Vector3 target;
+
+    Vector3 mousePosition;
 
     private bool isMoving;
     public Animator animator;
@@ -24,17 +27,30 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            target.z = transform.position.z;
-            
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = transform.position.z;
+
+            // Check if there is a collider between the player and the mouse click position
+            if (IsCollidingWithObstacle(transform.position, mousePosition))
+            {
+                // Stop player movement if a collider is detected
+                isMoving = false;
+                return;
+            }
+            else
+            {
+                isMoving = true;
+            }
         }
 
-        Move();
         
-        HasMoved();
         //Animacao
         if (isMoving)
         {
+            Move();
+
+            HasMoved();
+
             animator.SetBool("Running", true);
         }
         else
@@ -44,9 +60,11 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+   
+
     private void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, mousePosition, speed * Time.deltaTime);
         isMoving = true;
     }
 
@@ -55,6 +73,21 @@ public class PlayerMovement : MonoBehaviour
         if(transform.transform.position == target) 
         { 
             isMoving = false;
+                  
         }
     }
+
+    private bool IsCollidingWithObstacle(Vector3 startPos, Vector3 endPos)
+    {
+        RaycastHit2D hit = Physics2D.Linecast(startPos, endPos);
+
+        if (hit.collider != null && hit.collider.CompareTag("Obstacle"))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+
 }
