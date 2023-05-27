@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Linecast(startPos, endPos);
 
-        if (hit.collider != null && hit.collider.CompareTag("Obstacle"))
+        if (hit.collider != null && hit.collider.CompareTag("Wall"))
         {
             return true;
         }
