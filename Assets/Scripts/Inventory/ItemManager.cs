@@ -36,7 +36,7 @@ public class ItemManager : MonoBehaviour
                 slot.AddtoSlot(item);
                 Debug.Log("Item Added to inventory");
                 item.added = true;
-                textUI.text = (item.itemName);
+               
             }
 
             if (item.hasBeenUsed && item.added == true)
@@ -44,7 +44,7 @@ public class ItemManager : MonoBehaviour
                 inventory.Remove(item);
                 Debug.Log("Item Removed from inventory");
                 item.added = false;
-                textUI.text = (item.itemName);
+                
             }
         }
 

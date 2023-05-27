@@ -28,7 +28,9 @@ public class IventaryActivate : MonoBehaviour
             {
                 child.gameObject.SetActive(true);
                 isActive= true;
-                
+              
+
+
 
             }
                 
@@ -45,4 +47,6 @@ public class IventaryActivate : MonoBehaviour
 
         }
     }
+
+  
 }
