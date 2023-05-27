@@ -7,7 +7,7 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
 
-    public Array levelItems;
+    public Item[] levelItems;
     public List<Item> inventory;
 
     public Slots slot;
