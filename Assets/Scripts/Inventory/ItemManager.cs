@@ -9,13 +9,9 @@ public class ItemManager : MonoBehaviour
 
     public Array levelItems;
     public List<Item> inventory;
-   
-    public TextMeshProUGUI textUI;
 
     public Slots slot;
     
-
-
     private void Start()
     {
         inventory = new List<Item>();

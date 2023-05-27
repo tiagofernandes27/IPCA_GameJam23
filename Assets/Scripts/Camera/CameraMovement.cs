@@ -9,8 +9,6 @@ public class CameraMovement : MonoBehaviour
     public GameObject lowerRightSquare;
     public GameObject lowerLeftSquare;
 
-    //Grab the other file we need to use here
-    public bool CameraTilted;
 
     void LateUpdate()
     {

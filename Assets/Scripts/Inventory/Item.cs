@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public string itemName;
-    
     private bool isColliding;
     public bool hasBeenCollected { set; get; }
     public bool hasBeenUsed { private set; get; }
