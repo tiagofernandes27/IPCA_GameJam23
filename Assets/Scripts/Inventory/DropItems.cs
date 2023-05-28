@@ -111,8 +111,9 @@ public class DropItems : MonoBehaviour
             Destroy(child.gameObject);
             Debug.Log("DROP Balão");
         }
-        else if (child.CompareTag("Bomba") && player.transform.position.x < 0 && player.transform.position.y > 0)
+        else if (child.CompareTag("Bomba") && player.transform.position.x < 0 && player.transform.position.y > 0 && child.CompareTag("Pipoca"))
         {
+
             pipocas = GameObject.FindWithTag("Pipocas");
             ExplosionAnimator.SetBool("Explosion", true);
             CashierAnimator.SetBool("Walk", true);
