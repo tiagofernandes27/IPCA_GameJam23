@@ -91,6 +91,7 @@ public class DropItems : MonoBehaviour
             }
             Destroy(child.gameObject);
             Debug.Log("DROP SIRENE");
+            FindObjectOfType<AudioManager>().PlaySound("Siren");
         }
         else if (child.CompareTag("Balão") && player.transform.position.x > 0 && player.transform.position.y > 0)
         {
@@ -110,8 +111,9 @@ public class DropItems : MonoBehaviour
             }
             Destroy(child.gameObject);
             Debug.Log("DROP Balão");
+            FindObjectOfType<AudioManager>().PlaySound("Balloon");
         }
-        else if (child.CompareTag("Bomba") && player.transform.position.x < 0 && player.transform.position.y > 0 && child.CompareTag("Pipoca"))
+        else if (child.CompareTag("Bomba") && player.transform.position.x < 0 && player.transform.position.y > 0 /*&& child.CompareTag("Pipocas")*/)
         {
 
             pipocas = GameObject.FindWithTag("Pipocas");
@@ -124,6 +126,7 @@ public class DropItems : MonoBehaviour
             Destroy(child.gameObject);
             
             Debug.Log("DROP Bomba");
+            FindObjectOfType<AudioManager>().PlaySound("BombExplosion");
         }
         else if (child.CompareTag("Ticket") && player.transform.position.x > 0 && player.transform.position.y > 0)
         {

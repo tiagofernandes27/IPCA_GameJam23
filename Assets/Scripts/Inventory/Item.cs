@@ -49,7 +49,6 @@ public class Item : MonoBehaviour
     {
         hasBeenCollected= true;
         Debug.Log("Coletou");
+        FindObjectOfType<AudioManager>().PlaySound("Pickup");
     }
-
-
 }

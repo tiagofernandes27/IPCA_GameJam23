@@ -704,6 +704,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CinemaRunning: 0
   OutsideRunning: 0
+--- !u!114 &219769736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219769728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515a00542bed1384b94f68d120f177b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClipName: 
 --- !u!1 &254139599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,9 +1168,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.24858665, y: 5.5931473}
+  m_Offset: {x: 3.5847874, y: 3.041936}
   serializedVersion: 2
-  m_Radius: 11.344564
+  m_Radius: 5.4571524
 --- !u!114 &316137195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,8 +1783,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1623195953
-  m_SortingLayer: 1
+  m_SortingLayerID: 1268715117
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f691fcad6403fdc4699da4f9d4aa6954, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2156,6 +2169,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetAspectRatio: 1
+--- !u!1 &1148784612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1148784614}
+  - component: {fileID: 1148784613}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1148784613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148784612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3593cdf737c0a344d8d995b0cc4303bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: balloon
+    clip: {fileID: 8300000, guid: 55eadede1eecc684caf35f1ea5c099ce, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+  - name: BombExlosion
+    clip: {fileID: 8300000, guid: 24a1e33312ccb7c4786382c88019e0f9, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+  - name: PopcornExplosion
+    clip: {fileID: 8300000, guid: cee30162b38f8bc4ba3634a1cda5ec40, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+  - name: HappySong
+    clip: {fileID: 8300000, guid: fa40d89f4d237f84f903f6e1f3769787, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+    loop: 1
+  - name: LittleBombExplosion
+    clip: {fileID: 8300000, guid: 28bba59dc3cc80f4f80f9e09bb67e0e7, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+  - name: Siren
+    clip: {fileID: 8300000, guid: 95ee036db2b199a469422a5f4f191808, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+  - name: Step
+    clip: {fileID: 8300000, guid: e4282cc8d97b56e42aabd3affc747e3d, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+--- !u!4 &1148784614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148784612}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.41277027, y: 0.16906595, z: -0.8830304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199971925
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,6 +4365,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CinemaRunning: 0
   OutsideRunning: 0
+--- !u!114 &2029328939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029328930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515a00542bed1384b94f68d120f177b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClipName: 
 --- !u!1 &2084918028 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1978435549374836017, guid: 6c0e4d700eddd2c4eb57c5f5c5eac49e, type: 3}
