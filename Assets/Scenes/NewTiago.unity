@@ -275,6 +275,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1946576880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3774217169996231832, guid: 0e9090b09789f584493330d2b1d48f73, type: 3}
+  m_PrefabInstance: {fileID: 1309094846532669961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1946576885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946576880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d008de569d54343b49874e93443f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.1
+  fullText: Hello, World!
 --- !u!1001 &1309094846532669961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,6 +304,14 @@ PrefabInstance:
     - target: {fileID: 168712813739497919, guid: 0e9090b09789f584493330d2b1d48f73, type: 3}
       propertyPath: m_Name
       value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600926958030888934, guid: 0e9090b09789f584493330d2b1d48f73, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600926958030888934, guid: 0e9090b09789f584493330d2b1d48f73, type: 3}
+      propertyPath: m_fontSize
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 5933131021616265473, guid: 0e9090b09789f584493330d2b1d48f73, type: 3}
       propertyPath: m_Pivot.x
