@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Sirene
+  - Dinheiro
+  - "Bal\xE3o"
+  - Bomba
+  - Ticket
   layers:
   - Default
   - TransparentFX
