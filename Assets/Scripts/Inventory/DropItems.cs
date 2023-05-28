@@ -5,9 +5,15 @@ using UnityEngine;
 
 public class DropItems : MonoBehaviour
 {
+    public GameObject[] myObjects; // Array of GameObjects
+
     public GameObject[] slots;
     public GameObject player;
-   
+    public GameObject pipocas;
+
+    public Animator ExplosionAnimator;
+    public Animator CashierAnimator;
+
     void Start()
     {   
         
@@ -63,14 +69,51 @@ public class DropItems : MonoBehaviour
     {
         if (child.CompareTag("Sirene") && player.transform.position.x > 0 && player.transform.position.y < 0)
         {
+            for (int i = 0; i < myObjects.Length; i++)
+            {
+                if (myObjects[i] != null)
+                {
+                    // Access the script component attached to the GameObject
+                    NpcRunningAway myScript = myObjects[i].GetComponent<NpcRunningAway>();
+
+                    // Check if the script component exists
+                    if (myScript != null)
+                    {
+                        // Access the boolean variable in the script
+                        myScript.OutsideRunning = true;
+                    }
+                }
+            }
+            Destroy(child.gameObject);
             Debug.Log("DROP SIRENE");
         }
         else if (child.CompareTag("Balão") && player.transform.position.x > 0 && player.transform.position.y > 0)
         {
+            for (int i = 0; i < myObjects.Length; i++)
+            {
+                if (myObjects[i] != null) {
+                    // Access the script component attached to the GameObject
+                    NpcRunningAway myScript = myObjects[i].GetComponent<NpcRunningAway>();
+
+                    // Check if the script component exists
+                    if (myScript != null)
+                    {
+                        // Access the boolean variable in the script
+                        myScript.CinemaRunning = true;
+                    } 
+                }
+            }
+            Destroy(child.gameObject);
             Debug.Log("DROP Balão");
         }
         else if (child.CompareTag("Bomba") && player.transform.position.x < 0 && player.transform.position.y > 0)
         {
+            pipocas = GameObject.FindWithTag("Pipocas");
+            ExplosionAnimator.SetBool("Explosion", true);
+            CashierAnimator.SetBool("Walk", true);
+            Destroy(pipocas);
+            Destroy(child.gameObject);
+            
             Debug.Log("DROP Bomba");
         }
         else if (child.CompareTag("Ticket") && player.transform.position.x > 0 && player.transform.position.y > 0)

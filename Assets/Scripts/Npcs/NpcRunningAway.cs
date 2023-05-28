@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class NpcRunningAway : MonoBehaviour
 {
-    public bool CinemaRunning = true;
+    public bool CinemaRunning;
     private Vector3 CinemaTarget = new Vector3(-10, 26, 0);
     public bool OutsideRunning;
-    private Vector3 OutsideTarget = new Vector3(100, 26, 0);
+    private Vector3 OutsideTarget = new Vector3(100, -40, 0);
 
     static float speed = 25f;
     static float MovementThreshold = 1f;

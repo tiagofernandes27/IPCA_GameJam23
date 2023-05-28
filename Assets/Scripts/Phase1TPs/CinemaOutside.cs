@@ -13,6 +13,7 @@ public class CinemaOutside : MonoBehaviour
         if (collision.collider.CompareTag("Player") && GetComponent<Collider2D>().OverlapPoint(playerMovement.target))
         {
             Player.transform.position = OutsideMarker.transform.position;
+            playerMovement.target = Player.transform.position;
         }
     }
 }

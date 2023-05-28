@@ -6,7 +6,7 @@ using System;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    static float speed = 15f;
     public Vector3 target;
 
     private bool isMoving;
