@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DropItems : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class DropItems : MonoBehaviour
 
     public Animator ExplosionAnimator;
     public Animator CashierAnimator;
+
+    //Codigo da cabana dos bilhetes
+    public GameObject TicketBooth;
+    private CapsuleCollider2D BoothCollider;
 
     void Start()
     {   
@@ -111,6 +116,9 @@ public class DropItems : MonoBehaviour
             pipocas = GameObject.FindWithTag("Pipocas");
             ExplosionAnimator.SetBool("Explosion", true);
             CashierAnimator.SetBool("Walk", true);
+            //Procura e destroi o collider que esta a esturvar
+            BoothCollider = GameObject.FindAnyObjectByType<CapsuleCollider2D>();
+            Destroy(BoothCollider);
             Destroy(pipocas);
             Destroy(child.gameObject);
             
@@ -118,7 +126,7 @@ public class DropItems : MonoBehaviour
         }
         else if (child.CompareTag("Ticket") && player.transform.position.x > 0 && player.transform.position.y > 0)
         {
-            Debug.Log("DROP Ticket");
+            SceneManager.LoadScene(0);
         }
     }
 }

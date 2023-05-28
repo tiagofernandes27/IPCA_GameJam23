@@ -15,6 +15,7 @@ public class CinemaEntrance : MonoBehaviour
         if (collision.collider.CompareTag("Player") && GetComponent<Collider2D>().OverlapPoint(playerMovement.target))
         {
             Player.transform.position = InsideMarker.transform.position;
+            playerMovement.target = Player.transform.position;
         }
     }
 }
