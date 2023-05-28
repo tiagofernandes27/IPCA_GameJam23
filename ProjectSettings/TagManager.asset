@@ -11,6 +11,10 @@ TagManager:
   - Bomba
   - Ticket
   - Pipocas
+  - CinemaNPC
+  - OutsideNPC
+  - Gerador
+  - Gerador2
   layers:
   - Default
   - TransparentFX

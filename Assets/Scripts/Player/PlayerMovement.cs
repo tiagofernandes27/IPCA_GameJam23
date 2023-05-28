@@ -6,6 +6,12 @@ using System;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    //Variavel que verifica se pode ativar o lenco
+    public bool lencoAnim = false;
+    //PlayerDirty
+    public bool PlayerDirty = false;
+
     static float speed = 15f;
     public Vector3 target;
 
