@@ -716,7 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515a00542bed1384b94f68d120f177b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClipName: 
+  audioClipName: LittleBombExplosion
 --- !u!1 &254139599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,46 +2199,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: balloon
+  - name: Balloon
     clip: {fileID: 8300000, guid: 55eadede1eecc684caf35f1ea5c099ce, type: 3}
-    volume: 0.5
-    pitch: 0
+    volume: 0.4
+    pitch: 1
     source: {fileID: 0}
     loop: 0
-  - name: BombExlosion
+  - name: BombExplosion
     clip: {fileID: 8300000, guid: 24a1e33312ccb7c4786382c88019e0f9, type: 3}
-    volume: 0.5
-    pitch: 0
+    volume: 0.2
+    pitch: 1
     source: {fileID: 0}
     loop: 0
   - name: PopcornExplosion
     clip: {fileID: 8300000, guid: cee30162b38f8bc4ba3634a1cda5ec40, type: 3}
-    volume: 0.5
-    pitch: 0
+    volume: 0.1
+    pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
   - name: HappySong
     clip: {fileID: 8300000, guid: fa40d89f4d237f84f903f6e1f3769787, type: 3}
-    volume: 0.5
-    pitch: 0
+    volume: 0.1
+    pitch: 1
     source: {fileID: 0}
     loop: 1
   - name: LittleBombExplosion
     clip: {fileID: 8300000, guid: 28bba59dc3cc80f4f80f9e09bb67e0e7, type: 3}
-    volume: 0.5
-    pitch: 0
+    volume: 0.15
+    pitch: 1
     source: {fileID: 0}
     loop: 0
   - name: Siren
     clip: {fileID: 8300000, guid: 95ee036db2b199a469422a5f4f191808, type: 3}
-    volume: 0.5
-    pitch: 0
+    volume: 0.15
+    pitch: 1
     source: {fileID: 0}
     loop: 0
   - name: Step
     clip: {fileID: 8300000, guid: e4282cc8d97b56e42aabd3affc747e3d, type: 3}
-    volume: 0.5
-    pitch: 0
+    volume: 0.1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Pickup
+    clip: {fileID: 8300000, guid: b84cf941e1962354c8935baf28df763d, type: 3}
+    volume: 0.15
+    pitch: 1
     source: {fileID: 0}
     loop: 0
 --- !u!4 &1148784614
@@ -4377,7 +4383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515a00542bed1384b94f68d120f177b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClipName: 
+  audioClipName: LittleBombExplosion
 --- !u!1 &2084918028 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1978435549374836017, guid: 6c0e4d700eddd2c4eb57c5f5c5eac49e, type: 3}
@@ -4441,6 +4447,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b27c682fcc74e45a86429a04e95688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2084918042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084918028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515a00542bed1384b94f68d120f177b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClipName: Step
 --- !u!1001 &1978435548229451325
 PrefabInstance:
   m_ObjectHideFlags: 0
